@@ -10,7 +10,6 @@ gulp.task('browser-sync', function() {
 		server: {
 			baseDir: rootpath
 		}
-    //proxy: "http://"
 	});
 });
 
@@ -31,8 +30,8 @@ gulp.task('postcss', function(){
 	gulp.src(cmnpath + 'postcss/*.css')
 	.pipe(postcss([
 		require('postcss-cssnext')({browsers: browsers}),
-    require('css-mqpacker'),
     require('postcss-import'),
+    require('css-mqpacker'),
     require('csswring')
 	]))
 	.pipe(gulp.dest(cmnpath + 'css'))
@@ -41,12 +40,12 @@ gulp.task('postcss', function(){
 
 
 gulp.task('watch', function(){
-	gulp.watch(cmnpath + 'postcss/**/*.pcss',['postcss']);
+	gulp.watch(cmnpath + 'postcss/**/*.css',['postcss']);
 	gulp.watch(
 		[
 			rootpath	+	'**/*.html',
 			rootpath	+	'**/*.php',
-			cmnpath		+ 'js/**/*.js'
+			cmnpath		+ 'js/*.js'
 		],
 		['browser-reload']);
 });
