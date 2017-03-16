@@ -37,16 +37,16 @@ npm install
 
 ```
 project/
-	├ htdocs/
-	│		├ common/
-	│		│ 	├ postcss/
-	│		│ 	└ css/
-	│		└index.html
-	│
-	├ .git/
-	├ node_modules/
-	├ gulpfile.js
-	└ package.json
+  ├ htdocs/
+  │  ├ common/
+  │  │  ├ postcss/
+  │  │  └ css/
+  │  └index.html
+  │
+  ├ .git/
+  ├ node_modules/
+  ├ gulpfile.js
+  └ package.json
 
 ```
 
