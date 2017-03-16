@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+:root{
+  --color: #f00;
+}
+
+h1{
+  color: var(--color);
+  box-sizing: border-box;
+}
