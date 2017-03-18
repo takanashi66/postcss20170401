@@ -1,1 +1,349 @@
+@charset "UTF-8";
+
 @import "base/reset.css";
+
+/********************
+* 変数
+********************/
+:root{
+  --main-color: #f00;
+  --base-color: #f6f6f6;
+  --accent-color: #D4413D;
+  --font-color: #555;
+}
+
+
+
+
+
+/********************
+* default
+********************/
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: "Times New Roman", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "メイリオ", Meiryo, serif;
+  font-size: 1.6rem;
+  color: var(--font-color);
+  line-height: 1.5;
+}
+
+
+
+
+
+/********************
+* .main_img
+********************/
+.main_img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+
+  background-image: url(../img/main-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+
+
+
+
+/********************
+* header
+********************/
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  padding: 20px 0;
+
+  background-color: #fff;
+
+  &_inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1020px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    & h1{
+      margin-right: auto;
+
+      font-size: 2.6rem;
+      line-height: 1.2;
+      color: var(--accent-color);
+
+      & small{
+        display: block;
+
+        font-size: .5em;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+/********************
+* .gnav
+********************/
+.gnav{
+  & ul{
+    display: flex;
+    align-items: center;
+
+    & li{
+      &:not(:last-child){
+        margin-right: 50px;
+      }
+
+      & a{
+        display: block;
+
+        color: var(--font-color);
+        font-size: 1.8rem;
+        text-decoration: none;
+
+        &:hover{
+          opacity: .7;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+/********************
+* main
+********************/
+main{
+
+}
+
+.art_title{
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+
+
+/********************
+* .about
+********************/
+.about{
+  padding: 100px 0 100px;
+  margin-bottom: 100px;
+
+  background-color: var(--base-color);
+
+  &_inner{
+    width: 1020px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    & p{
+      line-height: 1.8;
+    }
+  }
+}
+
+
+
+
+
+
+/********************
+* .product
+********************/
+.product{
+  margin-bottom: 100px;
+
+  & .art_title{
+    text-align: center;
+  }
+
+  &_btn{
+    text-align: center;
+    margin-top: 60px;
+
+    & a{
+      display: inline-block;
+      padding: 20px 80px;
+
+      border: solid 1px var(--accent-color);
+      color: var(--accent-color);
+      letter-spacing: .3em;
+      text-decoration: none;
+      background-color: #fff;
+      transition-property: background-color,color;
+  		transition-duration: .5s;
+
+      &:hover{
+        background-color: var(--accent-color);
+  			color: #fff;
+      }
+    }
+  }
+}
+
+.popular{
+  display: flex;
+
+
+  &_item{
+    width: 25%;
+
+    &:first-child{
+      & .popular_item_img{
+        background-image: url(../img/img03.jpg);
+      }
+    }
+
+    &:not(:first-child,:last-child){
+      width: 50%;
+      & .popular_item_img{
+        background-image: url(../img/img02.jpg);
+      }
+    }
+
+    &:last-child{
+      & .popular_item_img{
+        background-image: url(../img/img04.jpg);
+      }
+    }
+
+    &_img{
+      height: 280px;
+      background-position: center center;
+      background-size: cover;
+
+      & img{
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    & h3{
+      padding: 30px 0 0;
+      margin-bottom: 30px;
+
+      text-align: center;
+
+      &::after{
+        display: block;
+        content: "";
+        width: 100px;
+        margin: 15px auto 0;
+        border-bottom: solid 1px var(--accent-color);
+      }
+    }
+
+    & p{
+      padding: 0 30px;
+    }
+
+  }
+}
+
+
+
+
+
+/********************
+* .choosy
+********************/
+.choosy{
+  & .art_title{
+    text-align: center;
+  }
+
+  &_section{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1020px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    line-height: 1.8;
+
+    &:last-child{
+      margin-top: 100px;
+
+      & .choosy_section_description{
+        order: -1;
+        padding: 0 20px 0 0;
+      }
+
+    }
+
+    &_img{
+      width: 60%;
+
+      & img{
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &_description{
+      width: 40%;
+      padding: 0 0 0 20px;
+
+      & h3{
+        font-size: 2.4rem;
+        margin-bottom: 30px;
+      }
+    }
+
+    &_text{
+      width: 100%;
+      padding: 20px 0 0 0;
+    }
+  }
+}
+
+
+
+
+
+
+/********************
+* .news
+********************/
+
+
+
+
+
+
+
+/********************
+* footer
+********************/
+
+
+
+
+
+
+/********************
+* .fnav
+********************/

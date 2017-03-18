@@ -1,1 +1,490 @@
-@charset "UTF-8";html{box-sizing:border-box;overflow-y:scroll;-webkit-text-size-adjust:100%}*,:before,:after{box-sizing:inherit}:before,:after{text-decoration:inherit;vertical-align:inherit}html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}input,select{vertical-align:middle}input[type=button],input[type=submit]{-webkit-appearance:none}
+@charset "UTF-8";
+
+@charset "UTF-8";
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html {
+  box-sizing: border-box;
+  overflow-y: scroll; /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%; /* iOS 8+ */
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit; /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+input[type="button"],input[type="submit"] {
+	-webkit-appearance: none;
+}
+
+/********************
+* 変数
+********************/
+
+/********************
+* default
+********************/
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: "Times New Roman", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "メイリオ", Meiryo, serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/********************
+* .main_img
+********************/
+
+.main_img{
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90vh;
+
+  background-image: url(../img/main-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/********************
+* header
+********************/
+
+.header{
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
+  padding: 20px 0;
+
+  background-color: #fff
+}
+
+.header_inner{
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1020px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.header_inner h1{
+  margin-right: auto;
+  font-size: 26px;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  color: #D4413D;
+}
+
+.header_inner h1 small{
+  display: block;
+  font-size: .5em;
+  font-weight: normal;
+}
+
+/********************
+* .gnav
+********************/
+
+.gnav{
+}
+
+.gnav ul{
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gnav ul li{
+}
+
+.gnav ul li:not(:last-child){
+  margin-right: 50px;
+}
+
+.gnav ul li a{
+  display: block;
+  color: #555;
+  font-size: 18px;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.gnav ul li a:hover{
+  opacity: .7;
+}
+
+/********************
+* main
+********************/
+
+main{
+
+}
+
+.art_title{
+  font-size: 30px;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+/********************
+* .about
+********************/
+
+.about{
+  padding: 100px 0 100px;
+  margin-bottom: 100px;
+
+  background-color: #f6f6f6
+}
+
+.about_inner{
+  width: 1020px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about_inner p{
+  line-height: 1.8;
+}
+
+/********************
+* .product
+********************/
+
+.product{
+  margin-bottom: 100px
+}
+
+.product .art_title{
+  text-align: center;
+}
+
+.product_btn{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.product_btn a{
+  display: inline-block;
+  padding: 20px 80px;
+  border: solid 1px #D4413D;
+  color: #D4413D;
+  letter-spacing: .3em;
+  text-decoration: none;
+  background-color: #fff;
+  transition-property: background-color,color;
+  transition-duration: .5s;
+}
+
+.product_btn a:hover{
+  background-color: #D4413D;
+  color: #fff;
+}
+
+.popular{
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+.popular_item{
+  width: 25%;
+}
+
+.popular_item:first-child{
+}
+
+.popular_item:first-child .popular_item_img{
+  background-image: url(../img/img03.jpg);
+}
+
+.popular_item:not(:first-child):not(:last-child){
+  width: 50%;
+}
+
+.popular_item:not(:first-child):not(:last-child) .popular_item_img{
+  background-image: url(../img/img02.jpg);
+}
+
+.popular_item:last-child{
+}
+
+.popular_item:last-child .popular_item_img{
+  background-image: url(../img/img04.jpg);
+}
+
+.popular_item_img{
+  height: 280px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.popular_item_img img{
+  width: 100%;
+  height: auto;
+}
+
+.popular_item h3{
+  padding: 30px 0 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.popular_item h3:after{
+  display: block;
+  content: "";
+  width: 100px;
+  margin: 15px auto 0;
+  border-bottom: solid 1px #D4413D;
+}
+
+.popular_item p{
+  padding: 0 30px;
+}
+
+/********************
+* .choosy
+********************/
+
+.choosy{
+}
+
+.choosy .art_title{
+  text-align: center;
+}
+
+.choosy_section{
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 1020px;
+  margin: 0 auto;
+  padding: 0 20px;
+  line-height: 1.8;
+}
+
+.choosy_section:last-child{
+  margin-top: 100px;
+}
+
+.choosy_section:last-child .choosy_section_description{
+  -webkit-order: -1;
+     -moz-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  padding: 0 20px 0 0;
+}
+
+.choosy_section_img{
+  width: 60%;
+}
+
+.choosy_section_img img{
+  width: 100%;
+  height: auto;
+}
+
+.choosy_section_description{
+  width: 40%;
+  padding: 0 0 0 20px;
+}
+
+.choosy_section_description h3{
+  font-size: 24px;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+}
+
+.choosy_section_text{
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+
+/********************
+* .news
+********************/
+
+/********************
+* footer
+********************/
+
+/********************
+* .fnav
+********************/

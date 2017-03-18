@@ -9,6 +9,7 @@
     "css-mqpacker": "^5.0.1",
     "csswring": "^5.1.1",
     "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.3.0",
     "postcss-cssnext": "^2.9.0",
     "postcss-import": "^9.1.0"

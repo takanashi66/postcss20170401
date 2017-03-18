@@ -4,6 +4,7 @@ var cmnpath				= rootpath + 'common/';
 var gulp 					= require('gulp');
 var browserSync		= require('browser-sync');
 var postcss				= require('gulp-postcss');
+var plumber				= require('gulp-plumber');
 
 gulp.task('browser-sync', function() {
 	browserSync.init({
@@ -28,11 +29,12 @@ var browsers = [
 
 gulp.task('postcss', function(){
 	gulp.src(cmnpath + 'postcss/*.css')
+  .pipe(plumber())
 	.pipe(postcss([
 		require('postcss-cssnext')({browsers: browsers}),
     require('postcss-import'),
     require('css-mqpacker'),
-    require('csswring')
+    //require('csswring')
 	]))
 	.pipe(gulp.dest(cmnpath + 'css'))
 	.pipe(browserSync.stream());
