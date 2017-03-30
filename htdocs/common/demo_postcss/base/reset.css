@@ -1,7 +1,4 @@
 @charset "UTF-8";
-
-@charset "UTF-8";
-
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -81,7 +78,6 @@ a {
 }
 
 /* change colours to suit your needs */
-
 ins {
     background-color:#ff9;
     color:#000;
@@ -89,7 +85,6 @@ ins {
 }
 
 /* change colours to suit your needs */
-
 mark {
     background-color:#ff9;
     color:#000;
@@ -112,7 +107,6 @@ table {
 }
 
 /* change border colour to suit your needs */
-
 hr {
     display:block;
     height:1px;
@@ -144,67 +138,4 @@ input, select {
 
 input[type="button"],input[type="submit"] {
 	-webkit-appearance: none;
-}
-
-/********************
-* 変数
-********************/
-
-/********************
-* default
-********************/
-
-html{
-  font-size: 62.5%;
-}
-
-body{
-  font-family: "Times New Roman", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "メイリオ", Meiryo, serif;
-  font-size: 16px;
-  font-size: 1.6rem;
-  color: #555;
-  line-height: 1.5;
-}
-
-/********************
-* .main_img
-********************/
-
-/********************
-* header
-********************/
-
-/********************
-* .gnav
-********************/
-
-/********************
-* main
-********************/
-
-/********************
-* .about
-********************/
-
-/********************
-* .product
-********************/
-
-/********************
-* .choosy
-********************/
-
-/********************
-* .news
-********************/
-
-/********************
-* footer
-********************/
-
-.footer{
-  background-color: #393944;
-  padding: 30px;
-  text-align: center;
-  color: #fff;
 }

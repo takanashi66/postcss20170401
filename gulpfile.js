@@ -33,8 +33,6 @@ gulp.task('postcss', function(){
 	.pipe(postcss([
 		require('postcss-cssnext')({browsers: browsers}),
     require('postcss-import'),
-    require('css-mqpacker'),
-    //require('csswring')
 	]))
 	.pipe(gulp.dest(cmnpath + 'css'))
 	.pipe(browserSync.stream());
